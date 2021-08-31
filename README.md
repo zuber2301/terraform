@@ -1,1 +1,1 @@
-# terraform
+# This is a reademe for my Terraform dev work. Modtly looking at exploring Terraform for Azure, creating landing zones, deploying basic infrastrcuture components such a RG, VM, groups etc..
