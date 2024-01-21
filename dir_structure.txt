@@ -1,0 +1,9 @@
+root
+├── vnet_core
+│   ├── main.tf        # Main VNet creation module
+│   └── variables.tf   # Input variables for VNet creation module
+├── vnet_peering
+│   ├── main.tf        # VNet peering module
+│   └── variables.tf   # Input variables for VNet peering module
+├── main.tf            # Root Terraform script calling modules
+└── variables.tf       # Input variables for root Terraform script
