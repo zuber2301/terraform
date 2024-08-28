@@ -1,0 +1,19 @@
+# resource_provider_registration.tf.j2
+
+# Register core providers
+{% for provider in resource_providers["core"] %}
+resource "azurerm_resource_provider_registration" "{{ provider | lower | replace('.', '_') }}" {
+  provider_namespace = "{{ provider }}"
+}
+{% endfor %}
+
+# Register other providers
+{% for category, providers in resource_providers.items() %}
+  {% if category != "core" %}
+    {% for provider in providers %}
+    resource "azurerm_resource_provider_registration" "{{ provider | lower | replace('.', '_') }}" {
+      provider_namespace = "{{ provider }}"
+    }
+    {% endfor %}
+  {% endif %}
+{% endfor %}
