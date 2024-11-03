@@ -1,15 +1,14 @@
-variable "spn_name" {
+variable "app_name" {
+  description = "The name of the Azure AD Application"
   type        = string
-  description = "Name for the Service Principal"
 }
 
-variable "role_assignment_scope" {
+variable "client_secret" {
+  description = "The client secret for the Azure AD Service Principal"
   type        = string
-  description = "Scope for the role assignment (e.g., subscription or resource group ID)"
 }
 
-variable "role_assignment_role" {
+variable "password_end_date" {
+  description = "The end date for the service principal password"
   type        = string
-  description = "Role to assign to the SPN (e.g., Contributor, Reader)"
 }
-

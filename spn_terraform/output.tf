@@ -1,16 +1,11 @@
-output "spn_client_id" {
-  description = "The Client ID (Application ID) of the Service Principal"
-  value       = azuread_application.spn_app.application_id
+output "service_principal_id" {
+  value = azurerm_ad_service_principal.example.id
 }
 
-output "spn_client_secret" {
-  description = "The Client Secret (Password) of the Service Principal"
-  value       = azuread_application_password.spn_password.value
-  sensitive   = true
+output "client_secret" {
+  value = azurerm_ad_service_principal_password.example.value
 }
 
-output "spn_tenant_id" {
-  description = "The Tenant ID associated with the Service Principal"
-  value       = data.azurerm_client_config.current.tenant_id
+output "client_id" {
+  value = azurerm_ad_application.example.application_id
 }
-
