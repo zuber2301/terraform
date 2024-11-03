@@ -1,8 +1,0 @@
-# provider.tf.j2
-
-provider "azurerm" {
-  features {}
-  skip_provider_registration = true
-}
-
-{% include 'resource_provider_registration.tf.j2' with context %}
