@@ -27,3 +27,9 @@ variable "location" {
     type = string
     description = "Azure region for RG"
 }
+
+variable "tags" {
+    type = map(string)
+    description = "A map fo tags to add to the RG"
+    default = {}
+}
